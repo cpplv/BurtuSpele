@@ -1,4 +1,4 @@
-const words = ["dators","māja","ābols","otrd","plūme", "kefīrs"];
+const words = ["dators","māja","ābols","otrdiena","plūme", "kefīrs"];
 var word_started = 0;
 var timeleft = 15;
 var random_word;
