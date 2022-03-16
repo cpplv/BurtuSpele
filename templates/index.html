@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="/static/style.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sajaukto burtu spēle</title>
+</head>
+<body onload="f_date()"> 
+<p id="about"></p>
+    <script type="text/javascript">
+	
+        function f_date()
+        {
+            temp_date = new Date();
+            day = temp_date.getDate();
+            month = temp_date.getMonth() + 1;
+            year = temp_date.getFullYear();
+            if (day < 10) 
+            {
+                day = "0" + day;
+            }
+            if (month <10) 
+            {
+                month = "0" + month;
+            }
+    
+            document.getElementById('dateFolder').innerHTML = day + "." + month + "." + year;
+        }
+
+    </script>
+
+    <div class="wrapper">
+        Šodienas datums: <div id="dateFolder"></div>
+        <div id="current_date_time_block"></div>
+        <div class="header">
+            <h1>
+                <div class="letter">&nbsp</div>
+                Sajaukto burtu spēle
+                <div class="letter">&nbsp</div>
+            </h1>
+
+            <ul>
+                <li>
+                    <a href="/static/noteikumi.html">
+                    Spēles noteikumi
+                    </a>
+                </li>
+                <li>
+                    <a href="top.html">
+                    TopsJSON
+                    </a>
+                </li>
+                <li>
+                    <a href="topDB.html">
+                    TopsDB
+                    </a>
+                </li>
+                <li>
+                    <a href="/static/codingbat.html">
+                    <strong>CodingBat uzdevumi<strong>
+                    </a>
+                </li>
+                <li>
+                    <a href="/static/sqlzoo.html">
+                    <strong>SQLzoo uzdevumi<strong>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <h3>Laiks: <div class="timeandstart" id="gstart" onclick="Startfunction()">Start</div> Punktu skaits<div class="points" id="pts">0</div></h3>
+                        
+        <div class="content" id="game_field">
+            <h2>Paņem burtus</h2>
+
+            <div class="game" id="for_letters">			
+			<!-- letter brick generation-->
+				
+            </div>
+			
+            <br><br><br>
+            <h2>Sastādi vārdu</h2>
+
+            <div class="game" id="word">
+			<!-- place for word-->
+    
+            </div>
+            <br><br>
+            <a href="/static/par.html"> Par autoru</a>
+        </div>
+
+    </div>
+
+<script src="/static/code.js">
+</script>		
+
+</body>
+</html>
